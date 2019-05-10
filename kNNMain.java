@@ -36,7 +36,7 @@ public class kNNMain{
 
 
 
-    // TASK 4: write a new method in DataSet.java which takes as arguments to DataPoint objects,
+    // TASK 4: write a new method in DataSet.java which takes as arguments two DataPoint objects,
     // and returns the Euclidean distance between those two points (as a double)
 
     System.out.println(DataSet.distanceEuc(dp,pd));

@@ -229,7 +229,7 @@ public class DataSet {
     Set<String> uniqueSet = new HashSet<String>(labels);
 
     return uniqueSet;
-  }
+    }
   ////////////////////////////////////////////////////////////////////////////
 
   ////////////////////////////////////////////////////////////////////////////
@@ -246,5 +246,16 @@ public class DataSet {
     }
   }
   ////////////////////////////////////////////////////////////////////////////
+  public static double distanceEuc(DataPoint p1, DataPoint p2)
+  {
+     double distanceSquared = 0;
+     for (int i=0; i<p1.x.length; i++)
+     {
+       distanceSquared += Math.pow((p1.x[i]-p2.x[i]),2);
+     }
 
+     double distance = Math.pow(distanceSquared,0.5);
+
+     return distance;
+     }
 }

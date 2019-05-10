@@ -40,6 +40,7 @@ public class kNNMain{
     // and returns the Euclidean distance between those two points (as a double)
 
     System.out.println(DataSet.distanceEuc(dp,pd));
+
     // TASK 5: Use the KNNClassifier class to determine the k nearest neighbors to a given DataPoint,
     // and make a print a predicted target label
 

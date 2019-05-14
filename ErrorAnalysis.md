@@ -1,6 +1,6 @@
 # Title
-## Course - Section
-## Authors
+## Intro to Computer - Section 03
+## George Ladas and Gabriel Sabatino
 
 ## Distributions of Model Accuracy
 

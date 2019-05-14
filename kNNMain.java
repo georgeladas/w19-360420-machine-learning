@@ -8,8 +8,12 @@ public class kNNMain{
 
   public static void main(String... args) throws FileNotFoundException{
 
+    double[] storePrecision = new double[1000];
+    for (int i=0; i < storePrecision.length; ++i) {
+
     // TASK 1: Use command line arguments to point DataSet.readDataSet method to
     // the desired file. Choose a given DataPoint, and print its features and label
+
           String PATH_TO_data = args[0];
             System.out.println(PATH_TO_data);
 
@@ -43,14 +47,32 @@ public class kNNMain{
 
     // TASK 5: Use the KNNClassifier class to determine the k nearest neighbors to a given DataPoint,
     // and make a print a predicted target label
-    System.out.println(KNNClassifier.KNNClassifier(dp));
+    KNNClassifier classifier = new KNNClassifier(3); //will give 3 closest datapoints
+    DataPoint[] nearestNeighbors = classifier.getNearestNeighbors(dp, dp.get(0)); //where dpa = the array list defined in task 1
+      for(int j=0; j < nearestNeighbors.length; j++)
+      {
+        //printDataPoint(nearestNeighbors[j]);// commented out to speed up program
+      }
 
 
     // TASK 6: loop over the datapoints in the held out test set, and make predictions for Each
     // point based on nearest neighbors in training set. Calculate accuracy of model.
 
+int truePositive = 0;
 
+  for(int j=0; j < TestSet.size(); j++)
+{
+
+    DataPoint dp = TestSet.get(j);
+    if(classifier.predict(TrainingSet, dp).equals(dp.getLabel()))
+  {
+
+    truePositive++;
   }
+}
+
+storePrecision[i] = (double)(truePositive) / TestSet.size();
+                                                                    }
 
   public static double mean(double[] arr){
     /*

@@ -43,7 +43,7 @@ public class kNNMain{
 
     // TASK 5: Use the KNNClassifier class to determine the k nearest neighbors to a given DataPoint,
     // and make a print a predicted target label
-
+    System.out.println(KNNClassifier.KNNClassifier(dp));
 
 
     // TASK 6: loop over the datapoints in the held out test set, and make predictions for Each

@@ -32,8 +32,8 @@ public class kNNMain{
 
 
     //TASK 2:Use the DataSet class to split the fullDataSet into Training and Held Out Test Dataset
-    List<DataPoint> TestSet = DataSet.getTestSet(fullDataSet, 0.2);
-    List<DataPoint> TrainingSet = DataSet.getTrainingSet(fullDataSet, 0.8);
+    List<DataPoint> TestSet = DataSet.getTestSet(fullDataSet, 0.3);
+    List<DataPoint> TrainingSet = DataSet.getTrainingSet(fullDataSet, 0.7);
 
 
     // TASK 3: Use the DataSet class methods to plot the 2D data (binary and multi-class)
@@ -72,7 +72,7 @@ int truePositive = 0;
 }
 
 storePrecision[i] = (double)(truePositive) / TestSet.size();
-                                                                    }
+
 
   public static double mean(double[] arr){
     /*
@@ -100,5 +100,6 @@ storePrecision[i] = (double)(truePositive) / TestSet.size();
     }
     return (double)sum/arr.length;
   }
-
+}
+}
 }

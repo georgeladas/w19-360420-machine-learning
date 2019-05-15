@@ -56,7 +56,7 @@ public class KNNClassifier{
     // Scan through all dataPoints to find the k closest neighbors
     for (DataPoint p:allPoints){
 
-      double d = DataSet.distanceEuclid(p,dp);
+      double d = DataSet.distanceEuc(p,dp);
 
       //iterate through the sorted  list of nearest neighbors/distances
       checkNearestNeighbors:
